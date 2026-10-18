@@ -3,3 +3,4 @@ uvicorn
 python-multipart
 Pillow
 numpy
+opencv-python-headless
