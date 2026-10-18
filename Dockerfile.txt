@@ -1,7 +1,7 @@
 FROM python:3.10-slim
 
-# Install Ghostscript, Potrace, and OpenCV dependencies
-RUN apt-get update && apt-get install -y ghostscript potrace libgl1-mesa-glx libglib2.0-0 && rm -rf /var/lib/apt/lists/*
+# Install Ghostscript and Potrace (Graphics dependencies removed for headless OpenCV)
+RUN apt-get update && apt-get install -y ghostscript potrace && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /app
 COPY requirements.txt .
